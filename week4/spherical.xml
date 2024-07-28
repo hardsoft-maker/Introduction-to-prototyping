@@ -1,0 +1,64 @@
+<mujoco model="hw4">
+  <compiler angle="radian" meshdir="meshes/"/>
+
+  <asset>
+    <mesh name="base_link" file="base_link.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="gray1" file="gray1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="blue1" file="blue1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="black1" file="black1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="red_circle1" file="red_circle1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="white1" file="white1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="yellow1" file="yellow1.stl" scale="0.001 0.001 0.001"/>
+    <mesh name="green1" file="green1.stl" scale="0.001 0.001 0.001"/>
+  </asset>
+
+  <worldbody>
+    <body name="base_link">
+      <inertial pos="2.94796e-06 1.70201e-06 -0.0846474" quat="0.5 0.5 -0.5 0.5" mass="0.0554884" diaginertia="6.24244e-06 3.58362e-06 3.58362e-06"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="base_link"/>
+      <geom type="mesh" mesh="base_link"/>
+      <body name="gray1" pos="3e-06 2e-06 -0.079647">
+        <inertial pos="0.0368944 -2.97994e-07 0.0368241" quat="0.678875 0.197809 0.197809 0.678875" mass="0.0925613" diaginertia="9.925e-05 9.44514e-05 6.34125e-06"/>
+        <joint name="Revolute_17" pos="0 0 0" axis="0 0 1"/>
+        <geom pos="-3e-06 -2e-06 0.079647" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="gray1"/>
+        <geom pos="-3e-06 -2e-06 0.079647" quat="1 0 0 0" type="mesh" mesh="gray1"/>
+        <body name="blue1" pos="0 0 0.010042">
+          <inertial pos="-0.0180769 0.0313097 0.0319037" quat="0.916505 -0.305009 -0.0817269 0.245577" mass="0.08637" diaginertia="7.90604e-05 7.47965e-05 5.70337e-06"/>
+          <joint name="Revolute_18" pos="0 0 0" axis="0 0 1"/>
+          <geom pos="-3e-06 -2e-06 0.069605" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="blue1"/>
+          <geom pos="-3e-06 -2e-06 0.069605" type="mesh" mesh="blue1"/>
+          <body name="black1" pos="0 0 0.010042">
+            <inertial pos="-0.0175283 -0.0303601 0.0275946" quat="0.900438 0.349606 -0.0936766 -0.241272" mass="0.0793449" diaginertia="6.12788e-05 5.80164e-05 4.58485e-06"/>
+            <joint name="Revolute_19" pos="0 0 0" axis="0 0 1"/>
+            <geom pos="-3e-06 -2e-06 0.059563" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="black1"/>
+            <geom pos="-3e-06 -2e-06 0.059563" type="mesh" mesh="black1"/>
+            <body name="yellow1" pos="-0.024876 -0.043086 0.064563">
+              <inertial pos="0.0353237 0.00408462 0" quat="-0.0922789 0.70106 0.0922789 0.70106" mass="0.0487166" diaginertia="2.52203e-05 2.40923e-05 1.94e-06"/>
+              <joint name="Revolute_22" pos="0 0 0" axis="0.5 0.866025 0"/>
+              <geom pos="0.024873 0.043084 -0.005" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="yellow1"/>
+              <geom pos="0.024873 0.043084 -0.005" quat="1 0 0 0" type="mesh" mesh="yellow1"/>
+            </body>
+          </body>
+          <body name="green1" pos="-0.024876 0.043085 0.074605">
+            <inertial pos="-0.0141238 -0.0326327 0" quat="0.560996 0.430446 -0.560996 0.430446" mass="0.0487166" diaginertia="2.52203e-05 2.40923e-05 1.94e-06"/>
+            <joint name="Revolute_23" pos="0 0 0" axis="0.5 -0.866025 0"/>
+            <geom pos="0.024873 -0.043087 -0.005" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="green1"/>
+            <geom pos="0.024873 -0.043087 -0.005" quat="1 0 0 0" type="mesh" mesh="green1"/>
+            <body name="red_circle1" pos="-0.011677 -0.064189 0">
+              <inertial pos="0.03655 0.021102 0" quat="0.5 0.5 -0.5 0.5" mass="0.132849" diaginertia="0.000140362 7.12883e-05 7.12883e-05"/>
+              <joint name="Revolute_20" pos="0 0 0" axis="0.866025 0.5 0"/>
+              <geom pos="0.03655 0.021102 -0.005" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="red_circle1"/>
+              <geom pos="0.03655 0.021102 -0.005" quat="1 0 0 0" type="mesh" mesh="red_circle1"/>
+            </body>
+          </body>
+        </body>
+        <body name="white1" pos="0.049751 0 0.084647">
+          <inertial pos="-0.0212005 0.028549 0" quat="0.270601 0.65328 -0.270601 0.65328" mass="0.0487193" diaginertia="2.5223e-05 2.40947e-05 1.94033e-06"/>
+          <joint name="Revolute_21" pos="0 0 0" axis="-1 0 0"/>
+          <geom pos="-0.049754 -2e-06 -0.005" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" mesh="white1"/>
+          <geom pos="-0.049754 -2e-06 -0.005" quat="1 0 0 0" type="mesh" mesh="white1"/>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>
